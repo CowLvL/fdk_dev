@@ -31,6 +31,13 @@
 		<link rel="stylesheet" href="/css/master_style.css">
 		<!-- Crypto_Admin skins -->
 		<link rel="stylesheet" href="/css/skins/_all-skins.css">
+		<?PHP
+			if (file_exists("css/pages/".$page.".css")) {
+		?>
+		<script src="css/pages/<?PHP echo $page; ?>.css"></script>
+		<?PHP
+			}
+		?>
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -49,6 +56,13 @@
 		<script src="/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 		<!-- Crypto_Admin App -->
 		<script src="/js/template.js"></script>
+		<?PHP
+			if (file_exists("js/pages/".$page.".js")) {
+		?>
+		<script src="js/pages/<?PHP echo $page; ?>.js"></script>
+		<?PHP
+			}
+		?>
 	</head>
 	<body class="hold-transition skin-yellow sidebar-mini">
 		<div class="wrapper">
