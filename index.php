@@ -32,9 +32,9 @@
 		<!-- Crypto_Admin skins -->
 		<link rel="stylesheet" href="/css/skins/_all-skins.css">
 		<?PHP
-			if (file_exists("css/pages/".$page.".css")) {
+			if (file_exists("pages/".$page."/css/index.css")) {
 		?>
-		<script src="/css/pages/<?PHP echo $page; ?>.css"></script>
+		<script src="/pages/<?PHP echo $page; ?>/css/index.css"></script>
 		<?PHP
 			}
 		?>
@@ -57,9 +57,9 @@
 		<!-- Crypto_Admin App -->
 		<script src="/js/template.js"></script>
 		<?PHP
-			if (file_exists("js/pages/".$page.".js")) {
+			if (file_exists("pages/".$page."/js/index.js")) {
 		?>
-		<script src="/js/pages/<?PHP echo $page; ?>.js"></script>
+		<script src="/pages/<?PHP echo $page; ?>/js/index.js"></script>
 		<?PHP
 			}
 		?>
