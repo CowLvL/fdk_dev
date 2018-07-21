@@ -34,7 +34,7 @@
 		<?PHP
 			if (file_exists("css/pages/".$page.".css")) {
 		?>
-		<script src="css/pages/<?PHP echo $page; ?>.css"></script>
+		<script src="/css/pages/<?PHP echo $page; ?>.css"></script>
 		<?PHP
 			}
 		?>
@@ -59,7 +59,7 @@
 		<?PHP
 			if (file_exists("js/pages/".$page.".js")) {
 		?>
-		<script src="js/pages/<?PHP echo $page; ?>.js"></script>
+		<script src="/js/pages/<?PHP echo $page; ?>.js"></script>
 		<?PHP
 			}
 		?>
