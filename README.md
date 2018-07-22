@@ -1,6 +1,5 @@
 # fdk_dev
-# assets
-# vendor_components:
+# assets/vendor_components:
 - bootstrap
 - bootstrap-colorpicker
 - bootstrap-datepicker
@@ -73,7 +72,7 @@
 - weather-icons
 - Web-Ticker-master
 - x-editable
-# vendor_plugins:
+# assets/vendor_plugins:
 - ace-builds-master
 - bootstrap-slider
 - bootstrap-wysihtml5
@@ -87,3 +86,4 @@
 - timepicker
 - weather-icons
 # images
+# engine/Facebook
