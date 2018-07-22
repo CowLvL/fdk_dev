@@ -1,4 +1,12 @@
 # fdk_dev
+# file tree:
+- assets
+- css
+- engine
+- images
+- js
+- languages
+- pages
 # assets/vendor_components:
 - bootstrap
 - bootstrap-colorpicker
