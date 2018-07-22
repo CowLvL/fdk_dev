@@ -37,6 +37,14 @@
 								</span>
 							</a>
 						</li>
+						<li class="<?PHP if ($page == "leaderboard") { echo "active"; } ?>">
+							<a href="/leaderboard">
+								<i class="fa fa-trophy"></i> <span><?PHP echo $lang_menu_leaderboard; ?></span>
+								<span class="pull-right-container">
+									<i class="fa fa-angle-right pull-right"></i>
+								</span>
+							</a>
+						</li>
 						<li class="header nav-small-cap"><?PHP echo $lang_menu_topic_personal; ?></li>
 						<li>
 							<a href="#">
