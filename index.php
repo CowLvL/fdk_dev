@@ -22,7 +22,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<link rel="icon" href="../images/favicon.ico">
-		<title>Thornament1</title>
+		<title>Thornament</title>
 		<!-- Bootstrap 4.0-->
 		<link rel="stylesheet" href="/assets/vendor_components/bootstrap/dist/css/bootstrap.css">
 		<!-- Bootstrap-extend -->
