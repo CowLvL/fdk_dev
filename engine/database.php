@@ -1,8 +1,8 @@
 <?php
-	$host = "";
-	$name = "";
-	$user = "";
-	$pass = "";
+	$host = "mysql3.unoeuro.com";
+	$name = "fortnitedanmark_dk_db2";
+	$user = "fortnitedanmark_dk";
+	$pass = "Bj4850tt01";
 	$dsn = "mysql:host=".$host.";dbname=".$name.";charset=utf8mb4";
 	$options = [
 		PDO::ATTR_EMULATE_PREPARES   => false, // turn off emulation mode for "real" prepared statements
@@ -13,6 +13,6 @@
 		$pdo = new PDO($dsn, $user, $pass, $options);
 	} catch (Exception $e) {
 		error_log($e->getMessage()); // in production
-		exit('Database error!'); // something a user can understand
+		exit('Database error! ' . $e->getMessage()); // something a user can understand
 	}
 ?>
