@@ -187,8 +187,8 @@
 				<!-- Main content -->
 				<section class="content">
 				<?PHP
-					if (file_exists("pages/".$page.".php")) {
-						include("pages/".$page.".php");
+					if (file_exists("pages/".$page."/index.php")) {
+						include("pages/".$page."/index.php");
 					} else {
 						include("pages/error/404.php");
 					}
