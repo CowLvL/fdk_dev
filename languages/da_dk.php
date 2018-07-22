@@ -11,6 +11,7 @@
 	$lang_menu_logout = "Logud";
 	$lang_menu_dashboard = "Dashboard";
 	$lang_menu_tournaments = "Turneringer";
+	$lang_menu_leaderboard = "Leaderboard";
 	$lang_menu_profile = "Profil";
 	$lang_menu_teams = "Hold";
 
