@@ -4,18 +4,32 @@
 	// set locale
 	setlocale(LC_ALL, "da_DK.UTF-8", "Danish_Denmark.1252", "danish_denmark", "danish", "dk_DK@euro");
 	ini_set("date.timezone", "Europe/Copenhagen");
+	// set $page
+	$page = ($_GET['page'] == "") ? "dashboard" : $_GET['page'];
 	// set session
 	@session_start();
+	// send user to login if not logged in
+	/*if ($page != "login" && !isset($_SESSION['userData'])) {
+		header("Location: /login");
+	}
+	if ($page == "login" && isset($_SESSION['userData'])) {
+		header("Location: /dashboard");
+	}*/
 	// include language
 	if (!isset($_SESSION['language'])) {
 		include("languages/da_dk.php");
 	} else {
 		include("languages/".$_SESSION['language'].".php");
 	}
-	// set $page
-	$page = ($_GET['page'] == "") ? "dashboard" : $_GET['page'];
 	// require site settings
 	require("engine/functions/getSettings.php");
+	$_SESSION['userData']['id'] = 53;
+	if (isset($_SESSION['userData'])) {
+		require("engine/classes/user.php");
+		$user = new FDK_User;
+		$user = (object) $user->getUser($_SESSION['userData']['id'])[0];
+		//print_r($user);
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,6 +84,11 @@
 			}
 		?>
 	</head>
+	<?PHP
+		if ($page == "login") {
+			include("login.php");
+		} else {
+	?>
 	<body class="hold-transition skin-yellow sidebar-mini">
 		<div class="wrapper">
 			<header class="main-header">
@@ -102,4 +121,7 @@
 		</div>
 		<!-- ./wrapper -->
 	</body>
+	<?PHP
+		}
+	?>
 </html>

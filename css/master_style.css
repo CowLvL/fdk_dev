@@ -759,6 +759,7 @@ a:active, a:focus, a:hover {
 	box-shadow: 3px 0 8px rgba(0, 0, 0, .125);
 }
 .user-panel .ulogo {
+	margin-top: 8px;
 	text-align: center;
 	padding-bottom: 15px;
 	font-size: 18px;
@@ -9473,6 +9474,42 @@ button.btn.dropdown-toggle::after, .wysihtml5-toolbar .btn.dropdown-toggle::afte
 	color: #fff;
 }
 
+.btn-epic {
+	background-color: #78a374;
+	border-color: #78a374;
+	color: #fff;
+}
+
+.btn-epic:hover {
+	background-color: #60815d;
+	border-color: #60815d;
+	color: #fff;
+}
+
+.btn-ps {
+	background-color: #003791;
+	border-color: #003791;
+	color: #fff;
+}
+
+.btn-ps:hover {
+	background-color: #002a70;
+	border-color: #002a70;
+	color: #fff;
+}
+
+.btn-twitch {
+	background-color: #6441a4;
+	border-color: #6441a4;
+	color: #fff;
+}
+
+.btn-twitch:hover {
+	background-color: #3c2861;
+	border-color: #3c2861;
+	color: #fff;
+}
+
 .btn-flickr {
 	background-color: #ff0084;
 	border-color: #ff0084;
@@ -12020,6 +12057,7 @@ table.dataTable thead .sorting:after {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	margin-bottom: 5px;
 }
 .demo-social .btn-social {
 	display: inline-block;
@@ -12923,6 +12961,11 @@ table.dataTable thead .sorting:after {
 
 .bg-dark {
 	background-color: #465161 !important;
+	color: #fff;
+}
+
+.bg-sidebar {
+	background-color: #252525 !important;
 	color: #fff;
 }
 

@@ -11,9 +11,6 @@
 						<img src="/images/logo-dark-text.png" alt="logo" class="dark-logo">
 					</span>
 				</a>
-				<?PHP
-					if (isset($_SESSION['userData'])) {
-				?>
 				<!-- Header Navbar -->
 				<nav class="navbar navbar-static-top">
 					<!-- Sidebar toggle button-->
@@ -28,6 +25,9 @@
 									<input type="text" class="form-control" placeholder="<?PHP echo $lang_search_value; ?>"> <a class="srh-btn"><i class="ti-close"></i></a>
 								</form>
 							</li>
+							<?PHP
+								if (isset($_SESSION['userData'])) {
+							?>
 							<!-- Messages -->
 							<li class="dropdown messages-menu">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -106,9 +106,9 @@
 									</li>
 								</ul>
 							</li>
+							<?PHP
+								}
+							?>
 						</ul>
 					</div>
 				</nav>
-				<?PHP
-					}
-				?>
