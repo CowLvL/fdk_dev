@@ -14,7 +14,11 @@
 	// send user to login if not logged in
 	if ($page != "login") {
 		if (!isset($_SESSION['userData']) && $settings["locked"] == 1) {
-			header("Location: /login");
+			if (headers_sent()) {
+				die("Redirect failed. <a href=\"/login\">Please click here to login</a>");
+			} else {
+				header("Location: /login");
+			}
 		}
 	} else {
 		if (isset($_SESSION['userData'])) {
