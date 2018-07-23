@@ -3,20 +3,26 @@
 					<!-- Sidebar user panel -->
 					<div class="user-panel">
 						<div class="ulogo">
-							<a href="index.html">
+							<a href="/">
 								<!-- logo for regular state and mobile devices -->
 								<span><b>Thor</b>nament</span>
 							</a>
 						</div>
+						<?PHP
+							if (isset($_SESSION['userData'])) {
+						?>
 						<div class="image">
-							<img src="/images/user2-160x160.jpg" class="rounded-circle" alt="User Image">
+							<img src="<?php echo $user->picture; ?>" class="rounded-circle" alt="User Image">
 						</div>
 						<div class="info">
-							<p>User#000000</p>
+							<p><a href="/user/Scott00000"><span style="font-weight: bold; color: rgb(251, 174, 28);"><?PHP echo substr($user->user_id, 0, -5) ?></span>#<?php echo substr($user->user_id, -5); ?></a></p>
 							<a href="" class="link" data-toggle="tooltip" title="<?PHP echo $lang_menu_account_settings; ?>" data-original-title="Settings"><i class="ion ion-gear-b"></i></a>
-							<a href="" class="link" data-toggle="tooltip" title="<?PHP echo $lang_menu_support; ?>" data-original-title="Email"><i class="ion ion-help-circled"></i></a>
-							<a href="" class="link" data-toggle="tooltip" title="<?PHP echo $lang_menu_logout; ?>" data-original-title="Logout"><i class="ion ion-power"></i></a>
+							<a href="/support" class="link" data-toggle="tooltip" title="<?PHP echo $lang_menu_support; ?>" data-original-title="Email"><i class="ion ion-help-circled"></i></a>
+							<a href="/logout" class="link" data-toggle="tooltip" title="<?PHP echo $lang_menu_logout; ?>" data-original-title="Logout"><i class="ion ion-power"></i></a>
 						</div>
+						<?PHP
+							}
+						?>
 					</div>
 					<!-- sidebar menu -->
 					<ul class="sidebar-menu" data-widget="tree">
@@ -47,7 +53,7 @@
 						</li>
 						<li class="header nav-small-cap"><?PHP echo $lang_menu_topic_personal; ?></li>
 						<li>
-							<a href="#">
+							<a href="/user/">
 								<i class="fa fa-user"></i> <span><?PHP echo $lang_menu_profile; ?></span>
 								<span class="pull-right-container">
 									<i class="fa fa-angle-right pull-right"></i>
