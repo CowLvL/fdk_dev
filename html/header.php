@@ -11,6 +11,9 @@
 						<img src="/images/logo-dark-text.png" alt="logo" class="dark-logo">
 					</span>
 				</a>
+				<?PHP
+					if (isset($_SESSION['userData'])) {
+				?>
 				<!-- Header Navbar -->
 				<nav class="navbar navbar-static-top">
 					<!-- Sidebar toggle button-->
@@ -74,13 +77,13 @@
 							<!-- User Account -->
 							<li class="dropdown user user-menu">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-									<img src="/images/user5-128x128.jpg" class="user-image rounded-circle" alt="User Image">
+									<img src="<?php echo $user->picture; ?>" class="user-image rounded-circle" alt="User Image">
 								</a>
 								<ul class="dropdown-menu scale-up">
 									<!-- User image -->
 									<li class="user-header">
 										<img src="/images/user5-128x128.jpg" class="float-left rounded-circle" alt="User Image">
-										<p>Romi Roy<small class="mb-5">jb@gmail.com</small><a href="#" class="btn btn-danger btn-sm btn-rounded"><?PHP echo $lang_topmenu_view_profile; ?></a></p>
+										<p><span style="font-weight: bold; color: rgb(251, 174, 28);"><?PHP echo substr($user->user_id, 0, -5) ?></span>#<?php echo substr($user->user_id, -5); ?><small class="mb-5"><?php echo $user->email; ?></small><a href="#" class="btn btn-danger btn-sm btn-rounded"><?PHP echo $lang_topmenu_view_profile; ?></a></p>
 									</li>
 									<!-- Menu Body -->
 									<li class="user-body">
@@ -97,7 +100,7 @@
 											</div>
 											<div role="separator" class="divider col-12"></div>
 											<div class="col-12 text-left">
-												<a href="#"><i class="fa fa-power-off"></i> <?PHP echo $lang_topmenu_logout; ?></a>
+												<a href="/logout"><i class="fa fa-power-off"></i> <?PHP echo $lang_topmenu_logout; ?></a>
 											</div>
 										</div>
 									</li>
@@ -106,3 +109,6 @@
 						</ul>
 					</div>
 				</nav>
+				<?PHP
+					}
+				?>
