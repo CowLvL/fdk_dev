@@ -25,4 +25,5 @@
 			return $stmt->fetch();
 		}
 	}
+	$FDKSTATS = true;
 ?>

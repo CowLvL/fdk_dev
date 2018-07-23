@@ -51,4 +51,5 @@
 			return $stmt->fetchAll();
 		}
 	}
+	$FDKGAMETAG = true;
 ?>

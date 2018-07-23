@@ -11,4 +11,5 @@
 			print 'Inside `aMemberFunc()`';
 		}
 	}
+	$FDKTOURNAMENT = true;
 ?>

@@ -44,4 +44,5 @@
 			return $teamMembers;
 		}
 	}
+	$FDKTEAM = true;
 ?>
