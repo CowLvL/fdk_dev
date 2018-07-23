@@ -1,10 +1,12 @@
 <?PHP
-	// get user info, 0 for all, else id or user_id of user
-	// include("engine/classes/user.php");
-	// $user = new FDK_User;
-	// var_dump($user->getUser(0));
+	// get user info
 	class FDK_User {
 		public $id;
+		// 0 for all, else id or user_id of user
+		// include("engine/classes/user.php");
+		// $user = new FDK_User;
+		// $user = json_decode(json_encode($user->getUser(0)));
+		// var_dump($user);
 		public function getUser($id = 0) {
 			$this->id = $id;
 			include("engine/database.php");

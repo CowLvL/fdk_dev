@@ -6,6 +6,8 @@
 	$lang_menu_topic_personal = "Personlig";
 
 	// menu
+	$lang_menu_login = "Login med Facebook";
+	$lang_menu_login_terms = "Ved at anvende vores site<br />accepterer du vores <a href=\"#tos\" id=\"tos\" class=\"show-tos\">vilkår</a>.";
 	$lang_menu_account_settings = "Konto indstilninger";
 	$lang_menu_support = "Hjælp";
 	$lang_menu_logout = "Logud";
