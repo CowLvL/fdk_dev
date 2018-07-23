@@ -26,8 +26,8 @@
 	if (isset($_SESSION['userData'])) {
 		require("engine/classes/user.php");
 		$user = new FDK_User;
-		$user = (object) $user->getUser($_SESSION['userData']['id'])[0];
-		//print_r($user);
+		$user = (object) json_decode(json_encode($user->getUser(53)));
+		print_r($user);
 	}
 ?>
 <!DOCTYPE html>

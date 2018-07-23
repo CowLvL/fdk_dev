@@ -17,8 +17,27 @@
 						<div class="info">
 							<p><a href="/user/Scott00000"><span style="font-weight: bold; color: rgb(251, 174, 28);"><?PHP echo substr($user->user_id, 0, -5) ?></span>#<?php echo substr($user->user_id, -5); ?></a></p>
 							<a href="" class="link" data-toggle="tooltip" title="<?PHP echo $lang_menu_account_settings; ?>" data-original-title="Settings"><i class="ion ion-gear-b"></i></a>
-							<a href="/support" class="link" data-toggle="tooltip" title="<?PHP echo $lang_menu_support; ?>" data-original-title="Email"><i class="ion ion-help-circled"></i></a>
+							<a href="/support" class="link" data-toggle="tooltip" title="<?PHP echo $lang_menu_support; ?>" data-original-title="Support"><i class="ion ion-help-circled"></i></a>
 							<a href="/logout" class="link" data-toggle="tooltip" title="<?PHP echo $lang_menu_logout; ?>" data-original-title="Logout"><i class="ion ion-power"></i></a>
+						</div>
+						<?PHP
+							} else {
+								// require facebook login config
+								require("engine/fb-config.php");
+								// contruct login url
+								$redirectURL = "https://fortnitedanmark.dk/engine/fb-callback.php";
+								$permissions = ['email'];
+								$loginURL = $helper->getLoginUrl($redirectURL, $permissions);
+						?>
+						<div class="login" style="width: 200px; margin: 0 auto;">
+							<div class="social-auth-links text-center">
+								<button class="btn btn-block btn-social btn-facebook" onclick="window.location = '<?php echo $loginURL; ?>'" style="padding-left: 40px;">
+									<i class="mdi mdi-facebook"></i> <?PHP echo $lang_menu_login; ?>
+								</button>
+							</div>
+							<div style="text-align: center;">
+								<span class="login-box-tos"><?PHP echo $lang_menu_login_terms; ?></span>
+							</div>
 						</div>
 						<?PHP
 							}
