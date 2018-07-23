@@ -52,7 +52,7 @@
 							</a>
 						</li>
 						<li class="header nav-small-cap"><?PHP echo $lang_menu_topic_personal; ?></li>
-						<li>
+						<li class="<?PHP if ($page == "user") { echo "active"; } ?>">
 							<a href="/user/">
 								<i class="fa fa-user"></i> <span><?PHP echo $lang_menu_profile; ?></span>
 								<span class="pull-right-container">
@@ -60,7 +60,7 @@
 								</span>
 							</a>
 						</li>
-						<li class="treeview">
+						<li class="<?PHP if ($page == "team") { echo "active "; } ?>treeview">
 							<a href="#">
 								<i class="fa fa-users"></i> <span><?PHP echo $lang_menu_teams; ?></span>
 								<span class="pull-right-container">

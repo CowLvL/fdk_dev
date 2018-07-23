@@ -23,7 +23,6 @@
 	}
 	// require site settings
 	require("engine/functions/getSettings.php");
-	$_SESSION['userData']['id'] = 53;
 	if (isset($_SESSION['userData'])) {
 		require("engine/classes/user.php");
 		$user = new FDK_User;
