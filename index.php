@@ -1,4 +1,4 @@
-﻿<?PHP
+<?PHP
 	// show errors
 	ini_set('display_errors', 1);
 	error_reporting(E_ALL);
@@ -14,11 +14,7 @@
 	// send user to login if not logged in
 	if ($page != "login") {
 		if (!isset($_SESSION['userData']) && $settings["locked"] == 1) {
-			if (headers_sent()) {
-				die("Redirect failed. <a href=\"/login\">Please click here to login</a>");
-			} else {
-				header("Location: /login");
-			}
+			header("Location: /login");
 		}
 	} else {
 		if (isset($_SESSION['userData'])) {
