@@ -23,6 +23,9 @@
 	}
 	// require site settings
 	require("engine/functions/getSettings.php");
+	if ($page != "login" && $settings["locked"] == 1 && !isset($_SESSION['userData'])) {
+		header("Location: /login");
+	}
 	if (isset($_SESSION['userData'])) {
 		require("engine/classes/user.php");
 		$user = new FDK_User;
