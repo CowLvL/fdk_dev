@@ -8,23 +8,23 @@
 	$page = ($_GET['page'] == "") ? "dashboard" : $_GET['page'];
 	// set session
 	@session_start();
+	// require site settings
+	require("engine/functions/getSettings.php");
 	// send user to login if not logged in
-	/*if ($page != "login" && !isset($_SESSION['userData'])) {
-		header("Location: /login");
-	}
-	if ($page == "login" && isset($_SESSION['userData'])) {
-		header("Location: /dashboard");
+	/*if ($page != "login") {
+		if (!isset($_SESSION['userData']) && $settings["locked"] == 1) {
+			header("Location: /login");
+		}
+	} else {
+		if (isset($_SESSION['userData'])) {
+			header("Location: /dashboard");
+		}
 	}*/
 	// include language
 	if (!isset($_SESSION['language'])) {
 		include("languages/da_dk.php");
 	} else {
 		include("languages/".$_SESSION['language'].".php");
-	}
-	// require site settings
-	require("engine/functions/getSettings.php");
-	if ($page != "login" && $settings["locked"] == 1 && !isset($_SESSION['userData'])) {
-		header("Location: /login");
 	}
 	if (isset($_SESSION['userData'])) {
 		require("engine/classes/user.php");
