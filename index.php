@@ -1,17 +1,18 @@
 ﻿<?PHP
 	// show errors
-	ini_set('display_errors', 1); error_reporting(E_ALL);
+	ini_set('display_errors', 1);
+	error_reporting(E_ALL);
 	// set locale
 	setlocale(LC_ALL, "da_DK.UTF-8", "Danish_Denmark.1252", "danish_denmark", "danish", "dk_DK@euro");
 	ini_set("date.timezone", "Europe/Copenhagen");
-	// set $page
-	$page = ($_GET['page'] == "") ? "dashboard" : $_GET['page'];
 	// set session
 	@session_start();
+	// set $page
+	$page = ($_GET['page'] == "") ? "dashboard" : $_GET['page'];
 	// require site settings
 	require("engine/functions/getSettings.php");
 	// send user to login if not logged in
-	/*if ($page != "login") {
+	if ($page != "login") {
 		if (!isset($_SESSION['userData']) && $settings["locked"] == 1) {
 			header("Location: /login");
 		}
@@ -19,7 +20,7 @@
 		if (isset($_SESSION['userData'])) {
 			header("Location: /dashboard");
 		}
-	}*/
+	}
 	// include language
 	if (!isset($_SESSION['language'])) {
 		include("languages/da_dk.php");
