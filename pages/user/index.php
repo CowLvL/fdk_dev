@@ -5,7 +5,7 @@
 			require("engine/classes/user.php");
 		}
 		$user = new FDK_User;
-		$user = (object) $user->getUser($mode)[0];
+		$user = (object) $user->user($mode)[0];
 		$bc_total = "#252525";
 		$bc_squad = "#ee534f";
 		$bc_duo = "#faae1c";
