@@ -9,18 +9,18 @@
 		// $user = json_decode(json_encode($user->user(0)));
 		// var_dump($user);
 		public function getUserInfo($uid = 0) {
-			$this->id = $uid;
+			$this->uid = $uid;
 			include("engine/database.php");
 			$sql = "SELECT * FROM users";
-			if (is_numeric($this->id)) {
-				if ($this->id != 0) {
+			if (is_numeric($this->uid)) {
+				if ($this->uid != 0) {
 					$sql .= " WHERE id = ?";
 				}
 			} else {
 				$sql .= " WHERE user_id = ?";
 			}
 			$stmt = $pdo->prepare($sql);
-			if ($this->id != 0 || !is_numeric($this->id)) {
+			if ($this->uid != 0 || !is_numeric($this->uid)) {
 				$stmt->execute([$this->id]);
 			} else {
 				$stmt->execute();
