@@ -32,7 +32,7 @@
 		// 	include("engine/classes/user.php");
 		// }
 		// $user = new FDK_User;
-		// $stats = json_decode(json_encode($user->stats(0)));
+		// $stats = json_decode(json_encode($user->stats(1, 1, 1)));
 		// var_dump($stats);
 		public function getUserStats($uid, $gid, $pid) {
 			$this->uid = $uid;
