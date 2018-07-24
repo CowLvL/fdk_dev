@@ -52,7 +52,6 @@
 			return $stmt->fetch();
 		}
 		public function __call($method, $arguments) {
-			print_r($method);
 			if ($method == 'user') {
 				if (count($arguments) == 1) {
 					return call_user_func_array(array($this,'getUserInfo'), $arguments);
