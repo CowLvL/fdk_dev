@@ -30,7 +30,7 @@
 	if (isset($_SESSION['userData'])) {
 		require("engine/classes/user.php");
 		$user = new FDK_User;
-		$user = (object) json_decode(json_encode($user->user(53)));
+		$user = (object) json_decode(json_encode($user->user(53)->{0}));
 		print_r($user);
 	}
 ?>
