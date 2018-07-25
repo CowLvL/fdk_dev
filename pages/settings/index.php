@@ -1,16 +1,11 @@
 <?PHP
-	if (isset($_GET['arg1']) && $_GET['arg1'] != "") {
-		$mode = $_GET['arg1'];
-		$window = (isset($_GET['arg2']) && $_GET['arg2'] != "") ? $_GET['arg2'] : "season5";
+	if (isset($_SESSION['userData'])) {
+		$mode = (isset($_GET['arg1']) && $_GET['arg1'] != "") ? $_GET['arg1'] : "site-settings";
 		if (!isset($FDKUSER)) {
 			require("engine/classes/user.php");
 		}
 		$user = new FDK_User;
-		$user = (object) $user->user($mode);
-		$bc_total = "#252525";
-		$bc_squad = "#ee534f";
-		$bc_duo = "#faae1c";
-		$bc_solo = "#02c293";
+		$user = (object) $user->user($_SESSION['userData']['uid']);
 ?>
 					<div class="row">
 						<div class="col-lg-3 col-12">
@@ -23,7 +18,7 @@
 									<div class="row">
 										<div class="col-12">
 											<div class="profile-user-info">
-												<div style="text-align: center;"><span style="font-size: 16px; font-weight: bold; color: #bbbbbb;"><?PHP echo $lang_user_media_channels; ?></span></div>
+												<div style="text-align: center;"><span style="font-size: 16px; font-weight: bold; color: #bbbbbb;"><?PHP echo $lang_settings_media_channels; ?></span></div>
 												<br />
 												<div><button class="btn btn-block btn-social btn-facebook"><i class="mdi mdi-facebook"></i> Facebookside</button></div>
 												<div><button class="btn btn-block btn-social btn-youtube"><i class="mdi mdi-youtube-play"></i> Youtube-kanal</button></div>
@@ -41,17 +36,16 @@
 						<div class="col-lg-9 col-12">
 							<div class="nav-tabs-custom">
 								<ul class="nav nav-tabs">
-									<li><a class="tab-href" href="#alltime" data-toggle="tab"><?PHP echo $lang_user_tab_alltime; ?></a></li>
-									<li><a class="tab-href" href="#season4" data-toggle="tab"><?PHP echo $lang_user_tab_season; ?> 4</a></li>
-									<li><a class="active tab-href" href="#season5" data-toggle="tab"><?PHP echo $lang_user_tab_season; ?> 5</a></li>
+									<li><a class="active tab-href" href="#site-settings" data-toggle="tab"><?PHP echo $lang_settings_tab_site_settings; ?></a></li>
+									<li><a class="tab-href" href="#account-settings" data-toggle="tab"><?PHP echo $lang_settings_tab_account_settings; ?></a></li>
 								</ul>
 								<div class="tab-content">
 									<!-- /.tab-pane -->
-									<div class="tab-pane" id="alltime">
+									<div class="active tab-pane" id="site-settings">
+										<span>Site settings</span>
 									</div>
-									<div class="tab-pane" id="season4">
-									</div>
-									<div class="active tab-pane" id="season5">
+									<div class="tab-pane" id="account-settings">
+										<span>Account settings</span>
 									</div>
 									<!-- /.tab-pane -->
 								</div>

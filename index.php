@@ -7,6 +7,7 @@
 	ini_set("date.timezone", "Europe/Copenhagen");
 	// set session
 	@session_start();
+	$_SESSION['userData']['uid'] = 53;
 	// set $page
 	$page = ($_GET['page'] == "") ? "dashboard" : $_GET['page'];
 	// require site settings
@@ -23,9 +24,12 @@
 	}
 	// include language
 	if (!isset($_SESSION['language'])) {
-		require("languages/da_dk.php");
-	} else {
-		require("languages/".$_SESSION['language'].".php");
+		$_SESSION['language'] = "da_dk";
+	}
+	require("languages/".$_SESSION['language'].".php");
+	// if $page has own language file, load it
+	if (file_exists("pages/".$page."/languages/".$_SESSION['language'].".php")) {
+		require("pages/".$page."/languages/".$_SESSION['language'].".php");
 	}
 	if (isset($_SESSION['userData'])) {
 		require("engine/classes/user.php");
