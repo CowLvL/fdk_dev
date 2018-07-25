@@ -22,10 +22,11 @@
 			$stmt = $pdo->prepare($sql);
 			if ($this->uid != 0 || !is_numeric($this->uid)) {
 				$stmt->execute([$this->uid]);
+				return $stmt->fetch();
 			} else {
 				$stmt->execute();
+				return $stmt->fetchAll();
 			}
-			return $stmt->fetchAll();
 		}
 		// id of user, id of game, id of platform
 		// if (!isset($FDKUSER)) {
