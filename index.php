@@ -7,6 +7,7 @@
 	ini_set("date.timezone", "Europe/Copenhagen");
 	// set session
 	@session_start();
+	$_SESSION['userData']['uid'] = 53;
 	// set $page
 	$page = ($_GET['page'] == "") ? "dashboard" : $_GET['page'];
 	// require site settings
