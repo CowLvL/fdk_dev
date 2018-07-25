@@ -28,6 +28,7 @@
 		require("languages/".$_SESSION['language'].".php");
 	}
 	if (isset($_SESSION['userData'])) {
+		echo $_SESSION['userData']['id']."<br />";
 		require("engine/classes/user.php");
 		$user = new FDK_User;
 		$user = (object) json_decode(json_encode($user->user($_SESSION['userData']['id'])));
