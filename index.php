@@ -7,6 +7,8 @@
 	ini_set("date.timezone", "Europe/Copenhagen");
 	// set session
 	@session_start();
+	// if localhost, uncomment next line
+	//$localhost = true;
 	// set $page
 	$page = ($_GET['page'] == "") ? "dashboard" : $_GET['page'];
 	// require site settings
