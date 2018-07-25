@@ -21,7 +21,7 @@
 			}
 			$stmt = $pdo->prepare($sql);
 			if ($this->uid != 0 || !is_numeric($this->uid)) {
-				$stmt->execute([$this->id]);
+				$stmt->execute([$this->uid]);
 			} else {
 				$stmt->execute();
 			}
