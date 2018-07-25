@@ -70,9 +70,12 @@
 								</span>
 							</a>
 						</li>
+						<?PHP
+							if (isset($_SESSION['userData'])) {
+						?>
 						<li class="header nav-small-cap"><?PHP echo $lang_menu_topic_personal; ?></li>
 						<li class="<?PHP if ($page == "user") { echo "active"; } ?>">
-							<a href="/user/">
+							<a href="/user/<?PHP echo $user->user_id; ?>">
 								<i class="fa fa-user"></i> <span><?PHP echo $lang_menu_profile; ?></span>
 								<span class="pull-right-container">
 									<i class="fa fa-angle-right pull-right"></i>
@@ -90,5 +93,8 @@
 								<li><a href="#">Test team</a></li>
 							</ul>
 						</li>
+						<?PHP
+							}
+						?>
 					</ul>
 				</section>
