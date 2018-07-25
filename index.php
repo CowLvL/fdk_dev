@@ -23,14 +23,14 @@
 	}
 	// include language
 	if (!isset($_SESSION['language'])) {
-		include("languages/da_dk.php");
+		require("languages/da_dk.php");
 	} else {
-		include("languages/".$_SESSION['language'].".php");
+		require("languages/".$_SESSION['language'].".php");
 	}
 	if (isset($_SESSION['userData'])) {
 		require("engine/classes/user.php");
 		$user = new FDK_User;
-		$user = (object) json_decode(json_encode($user->getUser(53)));
+		$user = (object) json_decode(json_encode($user->user(53)));
 		print_r($user);
 	}
 ?>
