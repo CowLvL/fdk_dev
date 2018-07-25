@@ -3,7 +3,7 @@
 	class FDK_User {
 		// 0 for all, else id or user_id of user
 		// if (!isset($FDKUSER)) {
-		// 	include("engine/classes/user.php");
+		// 	require("engine/classes/user.php");
 		// }
 		// $user = new FDK_User;
 		// $user = json_decode(json_encode($user->user(0)));
@@ -30,7 +30,7 @@
 		}
 		// id of user, id of game, id of platform
 		// if (!isset($FDKUSER)) {
-		// 	include("engine/classes/user.php");
+		// 	require("engine/classes/user.php");
 		// }
 		// $user = new FDK_User;
 		// $stats = json_decode(json_encode($user->stats(1, 1, 1)));
