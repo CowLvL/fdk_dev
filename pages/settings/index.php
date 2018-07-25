@@ -18,7 +18,7 @@
 									<div class="row">
 										<div class="col-12">
 											<div class="profile-user-info">
-												<div style="text-align: center;"><span style="font-size: 16px; font-weight: bold; color: #bbbbbb;">MEDIA CHANNELS</span></div>
+												<div style="text-align: center;"><span style="font-size: 16px; font-weight: bold; color: #bbbbbb;"><?PHP echo $lang_settings_media_channels; ?></span></div>
 												<br />
 												<div><button class="btn btn-block btn-social btn-facebook"><i class="mdi mdi-facebook"></i> Facebookside</button></div>
 												<div><button class="btn btn-block btn-social btn-youtube"><i class="mdi mdi-youtube-play"></i> Youtube-kanal</button></div>
@@ -36,8 +36,8 @@
 						<div class="col-lg-9 col-12">
 							<div class="nav-tabs-custom">
 								<ul class="nav nav-tabs">
-									<li><a class="active tab-href" href="#site-settings" data-toggle="tab">Site settings</a></li>
-									<li><a class="tab-href" href="#account-settings" data-toggle="tab">Account settings</a></li>
+									<li><a class="active tab-href" href="#site-settings" data-toggle="tab"><?PHP echo $lang_settings_tab_site_settings; ?></a></li>
+									<li><a class="tab-href" href="#account-settings" data-toggle="tab"><?PHP echo $lang_settings_tab_account_settings; ?></a></li>
 								</ul>
 								<div class="tab-content">
 									<!-- /.tab-pane -->

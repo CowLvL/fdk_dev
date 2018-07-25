@@ -23,7 +23,7 @@
 									<div class="row">
 										<div class="col-12">
 											<div class="profile-user-info">
-												<div style="text-align: center;"><span style="font-size: 16px; font-weight: bold; color: #bbbbbb;">MEDIA CHANNELS</span></div>
+												<div style="text-align: center;"><span style="font-size: 16px; font-weight: bold; color: #bbbbbb;"><?PHP echo $lang_user_media_channels; ?></span></div>
 												<br />
 												<div><button class="btn btn-block btn-social btn-facebook"><i class="mdi mdi-facebook"></i> Facebookside</button></div>
 												<div><button class="btn btn-block btn-social btn-youtube"><i class="mdi mdi-youtube-play"></i> Youtube-kanal</button></div>
@@ -41,9 +41,9 @@
 						<div class="col-lg-9 col-12">
 							<div class="nav-tabs-custom">
 								<ul class="nav nav-tabs">
-									<li><a class="tab-href" href="#alltime" data-toggle="tab">All time</a></li>
-									<li><a class="tab-href" href="#season4" data-toggle="tab">Sæson 4</a></li>
-									<li><a class="active tab-href" href="#season5" data-toggle="tab">Sæson 5</a></li>
+									<li><a class="tab-href" href="#alltime" data-toggle="tab"><?PHP echo $lang_user_tab_alltime; ?></a></li>
+									<li><a class="tab-href" href="#season4" data-toggle="tab"><?PHP echo $lang_user_tab_season; ?> 4</a></li>
+									<li><a class="active tab-href" href="#season5" data-toggle="tab"><?PHP echo $lang_user_tab_season; ?> 5</a></li>
 								</ul>
 								<div class="tab-content">
 									<!-- /.tab-pane -->
