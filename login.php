@@ -2,7 +2,10 @@
 	// require facebook login config
 	require("engine/fb-config.php");
 	// contruct login url
-	$redirectURL = "https://dev.fortnitedanmark.dk/engine/fb-callback.php";
+	$redirectURL = "https://".$settings['url']."/engine/fb-callback.php";
+	if (isset($localhost)) {
+		$redirectURL = "https://localhost/engine/fb-callback.php";
+	}
 	$permissions = ['email'];
 	$loginURL = $helper->getLoginUrl($redirectURL, $permissions);
 ?>
