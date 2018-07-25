@@ -83,20 +83,20 @@
 									<!-- User image -->
 									<li class="user-header">
 										<img src="/images/user5-128x128.jpg" class="float-left rounded-circle" alt="User Image">
-										<p><span style="font-weight: bold; color: rgb(251, 174, 28);"><?PHP echo substr($user->user_id, 0, -5) ?></span>#<?php echo substr($user->user_id, -5); ?><small class="mb-5"><?php echo $user->email; ?></small><a href="#" class="btn btn-danger btn-sm btn-rounded"><?PHP echo $lang_topmenu_view_profile; ?></a></p>
+										<p><span style="font-weight: bold; color: rgb(251, 174, 28);"><?PHP echo substr($user->user_id, 0, -5) ?></span>#<?php echo substr($user->user_id, -5); ?><small class="mb-5"><?php echo $user->email; ?></small><a href="/user/<?PHP echo $user->user_id; ?>" class="btn btn-danger btn-sm btn-rounded"><?PHP echo $lang_topmenu_view_profile; ?></a></p>
 									</li>
 									<!-- Menu Body -->
 									<li class="user-body">
 										<div class="row no-gutters">
 											<div class="col-12 text-left">
-												<a href="#"><i class="ion ion-person"></i> <?PHP echo $lang_topmenu_my_profile; ?></a>
+												<a href="/user/<?PHP echo $user->user_id; ?>"><i class="ion ion-person"></i> <?PHP echo $lang_topmenu_my_profile; ?></a>
 											</div>
 											<div class="col-12 text-left">
-												<a href="#"><i class="ion ion-settings"></i> <?PHP echo $lang_topmenu_settings; ?></a>
+												<a href="/settings#site-settings"><i class="ion ion-settings"></i> <?PHP echo $lang_topmenu_settings; ?></a>
 											</div>
 											<div role="separator" class="divider col-12"></div>
 											<div class="col-12 text-left">
-												<a href="#"><i class="ti-settings"></i> <?PHP echo $lang_topmenu_account_settings; ?></a>
+												<a href="/settings#account-settings"><i class="ti-settings"></i> <?PHP echo $lang_topmenu_account_settings; ?></a>
 											</div>
 											<div role="separator" class="divider col-12"></div>
 											<div class="col-12 text-left">
